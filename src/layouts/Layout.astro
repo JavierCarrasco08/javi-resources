@@ -1,0 +1,35 @@
+---
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<meta name="author" content="Javier Carrasco" />
+    	<meta
+    	  name="description"
+    	  content="In this site you will find links to some tools that work for the day of a web programmer. Like Frontend tools, IA tools, and web design tools." />
+    	<meta property="og:title" content="Javi Tools" />
+    	<meta
+    	  property="og:description"
+    	  content="In this site you will find links to some tools that work for the day of a web programmer. Like Frontend tools, IA tools, and web design tools." />
+    	<meta property="og:type" content="article" />
+    	<meta
+    	  name="keywords"
+    	  content="Herramientas Frontend, Herramientas de diseño web, Herramientas de inteligencia artificial, Herramientas IA, Frontend tools, Web design tools, IA tools, Artificial intelligence tools, Javi Tools, Herramientas de Javier" />
+    	<meta name="title" content="Javi Tools" />
+    	<meta name="publisher" content="Javier Carrasco" />
+		<title>{title}</title>
+	</head>
+	<body>
+	</body>
+</html>
