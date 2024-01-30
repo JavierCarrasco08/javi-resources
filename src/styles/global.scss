@@ -1,0 +1,97 @@
+@use 'variable' as v;
+@use 'utils' as u;
+
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+  font-family: v.$font__text;
+  height: 100%;
+}
+
+*,
+::before,
+::after {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+  font-family: v.$font__text;
+}
+
+body {
+  gap: 1rem;
+  width: 100%;
+  height: 100%;
+  box-sizing: inherit;
+  background-color: v.$primary__background___body;
+}
+
+.hero {
+  width: 100%;
+  height: 12.5rem;
+  background-image: url(./../assets/banner-header.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__container {
+    @include u.Container;
+    display: flex;
+    align-items: center;
+  }
+
+  &__logo {
+    @include u.Logo;
+  }
+}
+
+.slot {
+  flex-grow: 2;
+  padding: 1rem;
+  @include u.Container;
+  min-height: 60vh;
+}
+
+.foo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+  text-align: center;
+
+  &__container {
+    @include u.Container;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  &__logo {
+    @include u.Logo;
+    opacity: 0.8;
+  }
+
+  &__list {
+    list-style-type: none;
+    display: flex;
+    gap: 2rem;
+  }
+
+  &__link {
+    display: block;
+    height: auto;
+    text-decoration: none;
+  }
+
+  &__svg {
+    fill: v.$primary__color__text;
+    width: 2rem;
+    height: 2rem;
+  }
+}
