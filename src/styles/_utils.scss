@@ -1,0 +1,18 @@
+@use 'variable' as v;
+
+@mixin Container {
+  width: 100%;
+  max-width: v.$max-width;
+  height: auto;
+  margin: {
+    left: auto;
+    right: auto;
+  }
+}
+
+@mixin Logo {
+  font-size: 1.2rem;
+  font-weight: 900;
+  letter-spacing: 0.25rem;
+  color: v.$primary__color__titles;
+}
