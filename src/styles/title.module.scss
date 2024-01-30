@@ -1,0 +1,9 @@
+@use 'variable' as v;
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 900;
+  letter-spacing: 0.25rem;
+  color: v.$primary__color__titles;
+  margin-bottom: 1.5rem;
+}
