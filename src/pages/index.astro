@@ -1,0 +1,62 @@
+---
+import Title from '../components/title.astro';
+import Layout from '../layouts/Layout.astro';
+import MetaTags from './../layouts/metaTags.astro'
+import stylesScss from './../styles/index.module.scss'
+
+---
+
+<Layout title="JaviRecursos">
+    <MetaTags slot='head'>
+	<meta
+		name="description"
+		content="En esta web encontrarás un conjunto de herramientas y recursos que harán más fácil tu día a día como diseñador o desarrollador web. Bienvenido a JaviRecursos." />
+    	<meta
+		name="keywords"
+		content="Recursos Frontend, Recursos de diseño web, Herramientas de inteligencia artificial, Herramientas IA, Frontend Resources, Web design Resources, IA tools, Artificial intelligence tools, Javi, Herramientas de Javier, Recursos de Javier" />
+		<meta
+		property="og:description"
+		content="En esta web encontrarás un conjunto de herramientas y recursos que harán más fácil tu día a día como diseñador o desarrollador web. Bienvenido a JaviRecursos." />
+		<meta property="og:title" content="JaviRecursos" />
+		<meta name="revised" content="JaviRecursos, 2/2/2024"/>
+	    <meta name="title" content="JaviRecursos" />
+		<title>JaviRecursos</title>
+	</MetaTags>
+    <Title>JaviRecursos</Title>
+	<p class={stylesScss.note}><strong>Nota:</strong> Esta página se ha creado principalmente como un lugar donde se pueden encontrar <strong>herramientas, recursos y muchas otras cosas más</strong> que pueden ayudar a facilitar el aprendizaje sobre la <strong>programación y el diseño</strong>, así como también durante <em>el proceso de desarrollo</em>.</p>
+	<hr>
+	<main class={stylesScss.main}>
+		<h2 class={stylesScss.subtitle}>Recursos:</h2>
+		<div class={stylesScss.div}>
+			<nav class={stylesScss.nav}>
+				<ul class={stylesScss.ul}>
+					<li class={stylesScss.li}>
+						<a class={stylesScss.a} href="">Inteligencia Artificial</a>
+					</li>
+					<li class={stylesScss.li}>
+						<a class={stylesScss.a} href="">Comunidades de Discord</a>
+					</li>
+					<li class={stylesScss.li}>
+						<a class={stylesScss.a} href="">Cursos de Desarrollo web</a>
+					</li>
+					<li class={stylesScss.li}>
+						<a class={stylesScss.a} href="">Herramientas para Desarrolladores</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class={stylesScss.nav}>
+				<ul class={stylesScss.ul}>
+					<li class={stylesScss.li}>
+						<a class={stylesScss.a} href="">Herramientas de diseño</a>
+					</li>
+					<li class={stylesScss.li}>
+						<a class={stylesScss.a} href="">Herramientas de CSS</a>
+					</li>
+					<li class={stylesScss.li}>
+						<a class={stylesScss.a} href="">Paginas para practicas Programación</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</main>
+</Layout>
