@@ -1,0 +1,51 @@
+@use 'variable' as v;
+
+.main {
+  margin-top: 1.5rem;
+}
+
+.div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+}
+
+.subtitle {
+  margin-bottom: 1.5rem;
+  color: v.$primary__color__subtitles;
+}
+
+.note {
+  line-height: 1.3rem;
+  color: v.$primary__color__text;
+  margin-bottom: 1.5rem;
+
+  strong {
+    color: v.$primary__color__strong__text;
+  }
+}
+
+.nav {
+  width: 100%;
+  max-width: 350px;
+}
+
+.ul {
+  list-style-type: none;
+}
+
+.li:not(:last-child) {
+  margin-bottom: 0.7rem;
+}
+
+.a {
+  color: v.$primary__color__text;
+  font-weight: 600;
+  text-decoration: none;
+
+  abbr {
+    text-decoration: none;
+  }
+}
