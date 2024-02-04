@@ -18,7 +18,6 @@ html {
 }
 
 body {
-  gap: 1rem;
   width: 100%;
   height: 100%;
   box-sizing: inherit;
@@ -30,26 +29,10 @@ body {
   height: 12.5rem;
   background-image: url(./../assets/banner-header.png);
   background-size: cover;
-  background-repeat: no-repeat;
   background-position: right;
-  padding: 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  &__container {
-    @include u.Container;
-    display: flex;
-    align-items: center;
-  }
-
-  &__logo {
-    @include u.Logo;
-  }
 }
 
 .slot {
-  flex-grow: 2;
   padding: 1rem;
   @include u.Container;
   min-height: 60vh;
