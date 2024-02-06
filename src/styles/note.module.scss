@@ -1,0 +1,13 @@
+@use 'variable' as v;
+@use 'media-queries' as m;
+@use 'utils' as u;
+
+.note {
+  line-height: 1.3rem;
+  color: v.$primary__color__text;
+  margin-bottom: 1.5rem;
+
+  strong {
+    color: v.$primary__color__strong__text;
+  }
+}

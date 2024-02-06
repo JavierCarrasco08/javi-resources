@@ -1,0 +1,6 @@
+@use 'variable' as v;
+
+.subtitle {
+  margin-bottom: 1.5rem;
+  color: v.$primary__color__subtitles;
+}
