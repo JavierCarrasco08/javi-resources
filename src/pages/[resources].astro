@@ -1,0 +1,55 @@
+---
+import Layout from "./../layouts/Layout.astro"
+import MetaTags from "../layouts/metaTags.astro"
+import Title from "../components/title.astro"
+import SubTitle from "../components/subTitle.astro"
+import routes from "./../routes/route.js"
+import Note from "../components/note.astro"
+import ResourcesContainer from "../components/resourcesContainer.tsx"
+import type { Resource } from "../type.js"
+
+export function getStaticPaths() {
+    return routes
+}
+
+interface Props {
+    title: string
+    description: string
+    keywords: string[]
+    id: string
+	category: boolean
+	resources: {
+		[index: string]: any[]
+	}
+}
+
+const { title, description, keywords, id, category, resources } = Astro.props;
+const categories = Object.keys(resources)
+let arrayResources: Resource[] = [];
+for (const iterator in resources) {
+	arrayResources.push(...resources[iterator])
+}
+---
+
+<Layout>
+    <MetaTags slot="head">
+        <meta
+	    	name="description"
+	    	content={description} />
+        <meta
+	    	name="keywords"
+	    	content={keywords.join(", ")} />
+	    <meta
+	    	property="og:description"
+	    	content={description} />
+	    <meta property="og:title" content={title} />
+	    <meta name="revised" content="JaviRecursos, 2/2/2024"/>
+	    <meta name="title" content={title} />
+	    <title>{title}</title>
+    </MetaTags>
+	<Title>{title.split(" | ")[1]}</Title>
+	<Note><strong>Nota:</strong> Esta página se ha creado principalmente como un lugar donde se pueden encontrar <strong>herramientas, recursos y muchas otras cosas más</strong> que pueden ayudar a facilitar el aprendizaje sobre la <strong>programación y el diseño</strong>, así como también durante <em>el proceso de desarrollo</em>.</Note>
+	<SubTitle>Recursos:</SubTitle>
+	<hr />
+	<ResourcesContainer categories={categories} resources={arrayResources} category={category} />
+</Layout>
