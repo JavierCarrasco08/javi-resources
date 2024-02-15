@@ -1,0 +1,23 @@
+@use 'variable' as v;
+@use 'utils' as u;
+@use 'media-queries' as m;
+
+.select {
+  font-weight: 600;
+  border-width: 0.2rem;
+  border-style: solid;
+  border-color: v.$primary__color__text;
+  outline: solid 1px transparent;
+  padding: 0.25rem 1.5rem;
+  background-color: transparent;
+  color: v.$primary__color__text;
+  transition: border-color 0.5s linear;
+
+  option {
+    background-color: v.$primary__background___body;
+  }
+
+  &:focus {
+    border-color: v.$primary__color__strong__text;
+  }
+}
