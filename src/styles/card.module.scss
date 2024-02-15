@@ -1,0 +1,38 @@
+@use 'variable' as v;
+@use 'utils' as u;
+@use 'media-queries' as m;
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: v.$font__text;
+  width: 100%;
+  min-height: 300px;
+  padding: 1rem;
+  background-color: v.$primary__background__card;
+  border: 0.2rem solid v.$primary__border__card;
+  opacity: 0;
+}
+
+.h3 {
+  color: v.$primary__color__titles;
+}
+
+.p {
+  font-family: v.$font__text;
+  color: v.$primary__color__text;
+}
+
+.a {
+  font-family: v.$font__text;
+  font-weight: 600;
+  color: v.$primary__color__text;
+}
+
+@include m.Tablet {
+  .card {
+    width: 45%;
+    min-height: 270px;
+  }
+}
