@@ -10,4 +10,10 @@
   strong {
     color: v.$primary__color__strong__text;
   }
+
+  a {
+    font-family: v.$font__text;
+    font-weight: 600;
+    color: v.$primary__color__text;
+  }
 }
