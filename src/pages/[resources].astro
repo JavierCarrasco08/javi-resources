@@ -24,10 +24,15 @@ interface Props {
 }
 
 const { title, description, keywords, id, category, resources } = Astro.props;
-const categories = Object.keys(resources)
+const categories: string[] | null = Object.keys(resources)
 let arrayResources: Resource[] = [];
-for (const iterator in resources) {
+
+if(Array.isArray(resources)){
+	arrayResources = [...resources]
+}else {
+	for (const iterator in resources) {
 	arrayResources.push(...resources[iterator])
+}
 }
 ---
 
@@ -48,8 +53,13 @@ for (const iterator in resources) {
 	    <title>{title}</title>
     </MetaTags>
 	<Title>{title.split(" | ")[1]}</Title>
-	<Note><strong>Nota:</strong> Esta página se ha creado principalmente como un lugar donde se pueden encontrar <strong>herramientas, recursos y muchas otras cosas más</strong> que pueden ayudar a facilitar el aprendizaje sobre la <strong>programación y el diseño</strong>, así como también durante <em>el proceso de desarrollo</em>.</Note>
-	<SubTitle>Recursos:</SubTitle>
+	<Note />
 	<hr />
-	<ResourcesContainer categories={categories} resources={arrayResources} category={category} />
+	<SubTitle>Recursos:</SubTitle>
+	<ResourcesContainer 
+		categories={categories} 
+		resources={arrayResources} 
+		category={category} 
+		client:load 
+	/>
 </Layout>
