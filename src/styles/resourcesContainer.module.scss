@@ -1,0 +1,47 @@
+@use 'variable' as v;
+@use 'utils' as u;
+@use 'media-queries' as m;
+
+.main {
+  width: 100%;
+  margin-top: 1.5rem;
+}
+
+.header {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1.5rem;
+}
+
+.section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  row-gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.animation > * {
+  animation-name: down;
+  animation-fill-mode: forwards;
+  animation-duration: 0.5s;
+}
+
+@keyframes down {
+  from {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@include m.Tablet {
+  .section {
+    justify-content: space-between;
+  }
+}
