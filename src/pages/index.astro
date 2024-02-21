@@ -1,6 +1,8 @@
 ---
-import Title from '../components/title.astro';
 import Layout from '../layouts/Layout.astro';
+import Title from '../components/title.astro';
+import SubTitle from '../components/subTitle.astro';
+import Note from '../components/note.astro';
 import MetaTags from './../layouts/metaTags.astro'
 import stylesScss from './../styles/index.module.scss'
 
@@ -23,37 +25,31 @@ import stylesScss from './../styles/index.module.scss'
 		<title>JaviRecursos</title>
 	</MetaTags>
     <Title>JaviRecursos</Title>
-	<p class={stylesScss.note}><strong>Nota:</strong> Esta página se ha creado principalmente como un lugar donde se pueden encontrar <strong>herramientas, recursos y muchas otras cosas más</strong> que pueden ayudar a facilitar el aprendizaje sobre la <strong>programación y el diseño</strong>, así como también durante <em>el proceso de desarrollo</em>.</p>
+	<Note />
 	<hr>
 	<main class={stylesScss.main}>
-		<h2 class={stylesScss.subtitle}>Recursos:</h2>
+		<SubTitle>Recursos:</SubTitle>
 		<div class={stylesScss.div}>
 			<nav class={stylesScss.nav}>
 				<ul class={stylesScss.ul}>
 					<li class={stylesScss.li}>
-						<a class={stylesScss.a} href="">Inteligencia Artificial</a>
+						<a class={stylesScss.a} href="resources-ia">Inteligencia Artificial</a>
 					</li>
 					<li class={stylesScss.li}>
-						<a class={stylesScss.a} href="">Comunidades de Discord</a>
+						<a class={stylesScss.a} href="courses">Cursos Gratuitos</a>
 					</li>
 					<li class={stylesScss.li}>
-						<a class={stylesScss.a} href="">Cursos de Desarrollo web</a>
-					</li>
-					<li class={stylesScss.li}>
-						<a class={stylesScss.a} href="">Herramientas para Desarrolladores</a>
+						<a class={stylesScss.a} href="resources-developer">Herramientas para Desarrolladores web</a>
 					</li>
 				</ul>
 			</nav>
 			<nav class={stylesScss.nav}>
 				<ul class={stylesScss.ul}>
 					<li class={stylesScss.li}>
-						<a class={stylesScss.a} href="">Herramientas de diseño</a>
+						<a class={stylesScss.a} href="resources-design">Herramientas de diseño</a>
 					</li>
 					<li class={stylesScss.li}>
-						<a class={stylesScss.a} href="">Herramientas de CSS</a>
-					</li>
-					<li class={stylesScss.li}>
-						<a class={stylesScss.a} href="">Paginas para practicas Programación</a>
+						<a class={stylesScss.a} href="resources-practice">Paginas para practicar logica de Programación</a>
 					</li>
 				</ul>
 			</nav>
